@@ -30,6 +30,35 @@ function LibraryShowcase() {
               <p className="stat-label">Access Available</p>
             </div>
           </div>
+
+          <div className="opening-hours-card">
+            <h3 className="hours-card-title">Opening Hours</h3>
+            <div className="hours-card-content">
+              <div className="hours-group">
+                <div className="hours-row">
+                  <span className="hours-day">Monday – Friday</span>
+                  <span className="hours-time">9:30am – 6:00pm</span>
+                </div>
+                <div className="hours-row">
+                  <span className="hours-day">Saturdays</span>
+                  <span className="hours-time">9:00am – 2:00pm</span>
+                </div>
+              </div>
+              <div className="hours-divider-line"></div>
+              <div className="hours-group">
+                <div className="hours-subtitle">Vacation</div>
+                <div className="hours-row">
+                  <span className="hours-day">Monday – Friday</span>
+                  <span className="hours-time">9:30am – 4:00pm</span>
+                </div>
+              </div>
+              <div className="hours-divider-line"></div>
+              <div className="hours-row closed-row">
+                <span className="hours-day">Sundays/Public holidays</span>
+                <span className="hours-time">Library closed</span>
+              </div>
+            </div>
+          </div>
         </div>
         <div className={`showcase-image-container ${sectionVisible ? 'fade-in-right' : ''}`}>
           <div className="image-wrapper">
