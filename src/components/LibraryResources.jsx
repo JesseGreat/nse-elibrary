@@ -1,6 +1,8 @@
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import './LibraryResources.css';
 
 function LibraryResources() {
+  const [sectionRef, sectionVisible] = useScrollAnimation({ threshold: 0.1 });
   const resources = [
     {
       id: 1,
@@ -46,18 +48,22 @@ function LibraryResources() {
   ];
 
   return (
-    <section className="library-resources" id="resources">
+    <section className="library-resources" id="resources" ref={sectionRef}>
       <div className="section-container">
-        <h2 className="section-title">
+        <h2 className={`section-title ${sectionVisible ? 'fade-in' : ''}`}>
           Explore Our <span className="highlight">Library Resources</span>
         </h2>
-        <p className="section-subtitle">
+        <p className={`section-subtitle ${sectionVisible ? 'fade-in' : ''}`} style={{ animationDelay: '0.2s' }}>
           A vast collection of knowledge at your fingertips.
         </p>
 
         <div className="resources-grid">
-          {resources.map((resource) => (
-            <div key={resource.id} className="resource-card">
+          {resources.map((resource, index) => (
+            <div
+              key={resource.id}
+              className={`resource-card ${sectionVisible ? 'scale-in' : ''}`}
+              style={{ animationDelay: `${0.3 + index * 0.15}s` }}
+            >
               <div className="resource-icon">{resource.icon}</div>
               <h3 className="resource-title">{resource.title}</h3>
               <p className="resource-description">{resource.description}</p>

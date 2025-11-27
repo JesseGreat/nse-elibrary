@@ -5,10 +5,13 @@
 }
 
 :root {
-  --primary-bg: #2E1A3D;
-  --secondary-bg: #1A2332;
-  --card-bg: #1E2835;
-  --primary-red: #FF3B4A;
+  --primary-bg: #0A1929;
+  --secondary-bg: #0D1B2A;
+  --card-bg: #132337;
+  --primary-color: #00D9A5;
+  --secondary-color: #0EA5E9;
+  --accent-green: #00D9A5;
+  --accent-blue: #0EA5E9;
   --text-white: #FFFFFF;
   --text-gray: #B8B8B8;
   --text-light-gray: #D1D1D1;
@@ -22,7 +25,7 @@
 
 body {
   margin: 0;
-  background: linear-gradient(180deg, #2E1A3D 0%, #1A1528 100%);
+  background: linear-gradient(180deg, #0A1929 0%, #000000 100%);
   color: var(--text-white);
   min-height: 100vh;
 }

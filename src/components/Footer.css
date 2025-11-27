@@ -28,7 +28,7 @@
 }
 
 .social-link:hover {
-  color: var(--primary-red);
+  color: var(--primary-color);
 }
 
 @media (max-width: 768px) {

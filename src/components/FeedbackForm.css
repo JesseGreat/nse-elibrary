@@ -40,7 +40,7 @@
 .form-input:focus,
 .form-textarea:focus {
   background: rgba(30, 40, 53, 0.8);
-  border-color: var(--primary-red);
+  border-color: var(--primary-color);
 }
 
 .form-textarea {
@@ -51,7 +51,7 @@
 .form-submit {
   width: 100%;
   padding: 1rem 2rem;
-  background: var(--primary-red);
+  background: var(--primary-color);
   color: var(--text-white);
   border-radius: 8px;
   font-size: 1.125rem;
@@ -61,9 +61,9 @@
 }
 
 .form-submit:hover {
-  background: #E6354A;
+  background: #00C896;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(255, 59, 74, 0.4);
+  box-shadow: 0 4px 12px rgba(0, 217, 165, 0.4);
 }
 
 @media (max-width: 768px) {

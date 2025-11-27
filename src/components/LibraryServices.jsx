@@ -1,6 +1,9 @@
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import './LibraryServices.css';
 
 function LibraryServices() {
+  const [sectionRef, sectionVisible] = useScrollAnimation({ threshold: 0.1 });
+
   const services = [
     {
       id: 1,
@@ -48,18 +51,22 @@ function LibraryServices() {
   ];
 
   return (
-    <section className="library-services" id="services">
+    <section className="library-services" id="services" ref={sectionRef}>
       <div className="section-container">
-        <h2 className="section-title">
+        <h2 className={`section-title ${sectionVisible ? 'fade-in' : ''}`}>
           Discover Our <span className="highlight">Library Services</span>
         </h2>
-        <p className="section-subtitle">
+        <p className={`section-subtitle ${sectionVisible ? 'fade-in' : ''}`} style={{ animationDelay: '0.2s' }}>
           Dedicated support to enhance your research experience.
         </p>
 
         <div className="services-grid">
-          {services.map((service) => (
-            <div key={service.id} className="service-card">
+          {services.map((service, index) => (
+            <div
+              key={service.id}
+              className={`service-card ${sectionVisible ? 'scale-in' : ''}`}
+              style={{ animationDelay: `${0.3 + index * 0.15}s` }}
+            >
               <div className="service-icon">{service.icon}</div>
               <h3 className="service-title">{service.title}</h3>
               <p className="service-description">{service.description}</p>
