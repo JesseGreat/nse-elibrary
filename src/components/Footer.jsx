@@ -5,7 +5,7 @@ function Footer() {
     <footer className="footer">
       <div className="footer-container">
         <p className="footer-text">
-          © 2024 Nigerian Society of Engineering. All rights reserved.
+          © 2025 Nigerian Society of Engineering. All rights reserved.
         </p>
         <div className="social-links">
           <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-link">
